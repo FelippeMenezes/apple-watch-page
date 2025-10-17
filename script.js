@@ -31,7 +31,6 @@ function atualizarCorSelecioanda() {
     imagemMiniatura2.src = "./imagens/opcoes-cores/imagens-" + nomeCor.toLowerCase() + "/imagem-2.jpeg";
 }
 
-
 // console.log(imagemVisualizacao)
 
 function atualizarTamanho() {
