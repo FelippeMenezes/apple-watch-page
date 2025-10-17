@@ -214,3 +214,7 @@ button:hover {
   gap: 25px;
   justify-content: center;
 }
+
+.caixa-pequena {
+    transform: scale(0.9);
+}
