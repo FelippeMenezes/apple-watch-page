@@ -1,7 +1,26 @@
 const imagemVisualizacao = document.querySelector('#visualizacao img');
+const tituloProduto = document.querySelector('h1');
+
+const opcoesTamanho = ["41 mm", "45 mm"];
 
 let numImagemSelecionada = 1;
+let numTamanhoSelecionado = 1;
+
 // console.log(imagemVisualizacao)
+
+function atualizarTamanho() {
+    const opcaoTamanhoSelecionado = document.querySelector('[name="opcao-tamanho"]:checked').id.charAt(0);
+
+    numTamanhoSelecionado = opcaoTamanhoSelecionado;
+
+    const tamanhoCaixa = opcoesTamanho[numTamanhoSelecionado];
+
+    // console.log(tamanhoCaixa);
+
+    // console.log(opcaoTamanhoSelecionado);
+
+    tituloProduto.innerText = "Pulseira loop esportiva azul-inverno para caixa de " + tamanhoCaixa;
+}
 
 function atualizarImagemSelecionada() {
     const opcaoImagemSelecionada = document.querySelector('[name="opcao-imagem"]:checked').id.charAt(0);
