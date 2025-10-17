@@ -1,10 +1,30 @@
 const imagemVisualizacao = document.querySelector('#visualizacao img');
 const tituloProduto = document.querySelector('h1');
+const nomeCorSelecionada = document.querySelector('#nome-cor-selecionada');
+const imagemMiniatura0 = document.querySelector('[for="0-imagem"] img');
+const imagemMiniatura1 = document.querySelector('[for="1-imagem"] img');
+const imagemMiniatura2 = document.querySelector('[for="2-imagem"] img');
+
 
 const opcoesTamanho = ["41 mm", "45 mm"];
+const opcoesCores = ["Verde-cipreste", "Azul-inverno", "Meia-noite", "Estelar", "Rosa-claro"];
 
 let numImagemSelecionada = 1;
 let numTamanhoSelecionado = 1;
+let numCorSelecionada = 1;
+
+function atualizarCorSelecioanda() {
+    const opcaoCorSelecionada = document.querySelector('[name="opcao-cor"]:checked').id.charAt(0);
+
+    numCorSelecionada = opcaoCorSelecionada;
+
+    const nomeCor = opcoesCores[numCorSelecionada];
+
+    tituloProduto.innerText = "Pulseira loop esportiva " + nomeCor.toLowerCase() + " para caixa de " + opcoesTamanho[numTamanhoSelecionado];
+
+    nomeCorSelecionada.innerText = "Cor - " + nomeCor;
+}
+
 
 // console.log(imagemVisualizacao)
 
